@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artise:</strong>
+  <%= @google_song.Artise %>
+</p>
+
+<p>
+  <strong>Product title:</strong>
+  <%= @google_song.product_title %>
+</p>
+
+<p>
+  <strong>Content provider:</strong>
+  <%= @google_song.content_provider %>
+</p>
+
+<p>
+  <strong>Device type:</strong>
+  <%= @google_song.device_type %>
+</p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @google_song.label %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @google_song.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @google_song.end_date %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @google_song.year %>
+</p>
+
+<%= link_to 'Edit', edit_google_song_path(@google_song) %> |
+<%= link_to 'Back', google_songs_path %>

@@ -1,0 +1,57 @@
+<%= form_with(model: google_song, local: true) do |form| %>
+  <% if google_song.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(google_song.errors.count, "error") %> prohibited this google_song from being saved:</h2>
+
+      <ul>
+      <% google_song.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Artise %>
+    <%= form.text_field :Artise %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_title %>
+    <%= form.text_field :product_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content_provider %>
+    <%= form.text_field :content_provider %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_type %>
+    <%= form.text_field :device_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :label %>
+    <%= form.text_field :label %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.text_field :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.text_field :end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.number_field :year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

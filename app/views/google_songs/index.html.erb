@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Google Songs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artise</th>
+      <th>Product title</th>
+      <th>Content provider</th>
+      <th>Device type</th>
+      <th>Label</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @google_songs.each do |google_song| %>
+      <tr>
+        <td><%= google_song.Artise %></td>
+        <td><%= google_song.product_title %></td>
+        <td><%= google_song.content_provider %></td>
+        <td><%= google_song.device_type %></td>
+        <td><%= google_song.label %></td>
+        <td><%= google_song.start_date %></td>
+        <td><%= google_song.end_date %></td>
+        <td><%= google_song.year %></td>
+        <td><%= link_to 'Show', google_song %></td>
+        <td><%= link_to 'Edit', edit_google_song_path(google_song) %></td>
+        <td><%= link_to 'Destroy', google_song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Google Song', new_google_song_path %>

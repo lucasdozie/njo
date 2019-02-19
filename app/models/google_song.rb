@@ -1,0 +1,2 @@
+class GoogleSong < ApplicationRecord
+end
